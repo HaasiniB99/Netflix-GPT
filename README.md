@@ -1,6 +1,9 @@
 # Getting Started
 - Create react app
 - Configured tailwind
+- Header
+- Login Form
+- Sign up Form
 
 # Planning & Features
 - Before Login
