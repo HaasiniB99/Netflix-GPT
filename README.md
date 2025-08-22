@@ -53,6 +53,9 @@ Added the hardcoded values to the constants file
 - Build Movie List and Movie Card
 - TMDB img CDN_URL
 - usePopularMovies Custom hook
+- GPT Search bar & search page feature
+- (BONUS) Multi-language feature in our App 
+- Integrate GPT API'S.
 
 # steps for deployment
 - Install firebase CLI - 'npm install -g firebase-tools'
