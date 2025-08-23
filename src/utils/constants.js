@@ -10,7 +10,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMjM4N2IzNTVjNzY2NmNiYTgzMTJjNGViZDI4ODVmNCIsIm5iZiI6MTc1NTQ5OTY2OS4xNDUsInN1YiI6IjY4YTJjYzk1ZmU4YzVhMTRkYTAyZDg0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.R8BDkvn5ekS3o9r29jT11iPcz1tnWURWBcADXESqfRY'
+    Authorization: 'Bearer' + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -23,3 +23,5 @@ export const SUPPORTED_LANGUAGES = [
   {identifier:"kannada",name:"Kannada"},
   {identifier:"hindi",name:"Hindi"}
 ];
+
+export const GPT_KEY = process.env.REACT_APP_GPT_KEY;

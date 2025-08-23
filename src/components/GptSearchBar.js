@@ -1,6 +1,9 @@
-import React from 'react'
 import Header from './Header'
 import GptMovieSuggestions from './GptMovieSuggestions'
+
+{/* <Header/>
+<GptSearchBar/>
+<GptMovieSuggestions/> */}
 
 const GptSearchBar = () => {
   return (
@@ -9,7 +12,7 @@ const GptSearchBar = () => {
         <GptSearchBar/>
         <GptMovieSuggestions/>
     </div>
-  )
-}
+  );
+};
 
-export default GptSearchBar
+export default GptSearchBar;
