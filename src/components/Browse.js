@@ -25,14 +25,14 @@ const Browse = () => {
       { showGptSearch ? 
         <>
         <div className="relative">
-  {/* Background + search bar */}
-  <GptSearch />
+      {/* Background + search bar */}
+      <GptSearch />
 
-  {/* Movie list, starts below search bar */}
-  <div className="absolute left-0 w-full z-10 -mt-96">
-    <GptMovieSuggestions />
-  </div>
-</div>
+      {/* Movie list, starts below search bar */}
+        <div className="absolute left-0 w-full z-10 -mt-96">
+          <GptMovieSuggestions />
+        </div>
+      </div>
 
         </>
          : 
@@ -43,7 +43,7 @@ const Browse = () => {
       }
 
     </div>
-  )
-}
+  );
+};
 
 export default Browse;

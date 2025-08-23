@@ -1,9 +1,5 @@
-import Header from './Header'
-import GptMovieSuggestions from './GptMovieSuggestions'
-
-{/* <Header/>
-<GptSearchBar/>
-<GptMovieSuggestions/> */}
+import Header from './Header';
+import GptMovieSuggestions from './GptMovieSuggestions';
 
 const GptSearchBar = () => {
   return (
