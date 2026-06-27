@@ -1,13 +1,16 @@
 import './App.css';
 import Body from './components/Body';
+import ErrorBoundary from './components/ErrorBoundary';
 import { Provider } from 'react-redux';
 import appStore from './utils/appStore';
 
 function App() {
   return (
-    <Provider store={appStore} >
-      <Body/>
-    </Provider>
+    <ErrorBoundary>
+      <Provider store={appStore} >
+        <Body/>
+      </Provider>
+    </ErrorBoundary>
   );
 }
 
