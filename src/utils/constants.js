@@ -4,8 +4,6 @@ export const BgLOGO ="https://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4
 
 export const USER_AVATAR = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png";
 
-export const Naaha = "https://lh3.googleusercontent.com/a/ACg8ocJPeaYJ2pGGhQmxiHjWzk4Td86cj_1SYBQrmsNhuILCopMThppr=s576-c-no";
-
 export const API_OPTIONS = {
   method: 'GET',
   headers: {
@@ -15,13 +13,22 @@ export const API_OPTIONS = {
 };
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+export const BACKDROP_CDN_URL = "https://image.tmdb.org/t/p/original";
 
-export const SUPPORTED_LANGUAGES = [
-  {identifier:"en",name:"English"},
-  {identifier:"telugu",name:"Telugu"},
-  {identifier:"tamil",name:"Tamil"},
-  {identifier:"kannada",name:"Kannada"},
-  {identifier:"hindi",name:"Hindi"}
-];
+export const LANG_TO_INDUSTRY = {
+  en: "Hollywood/English",
+  telugu: "Tollywood/Telugu",
+  tamil: "Kollywood/Tamil",
+  kannada: "Sandalwood/Kannada",
+  hindi: "Bollywood/Hindi",
+};
+
+export const LANG_TO_TMDB_CODE = {
+  en: "en",
+  telugu: "te",
+  tamil: "ta",
+  kannada: "kn",
+  hindi: "hi",
+};
 
 export const GPT_KEY = process.env.REACT_APP_GPT_KEY;

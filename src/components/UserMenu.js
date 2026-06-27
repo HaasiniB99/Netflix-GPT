@@ -26,14 +26,14 @@ const UserMenu = () => {
   return (
     <div>
    {user && (<div className="relative">
-      <div onClick={() => setOpen(!open)} className="flex items-center gap-2 cursor-pointer" >
+      <button onClick={() => setOpen(!open)} tabIndex={0} aria-label="Toggle user menu" className="flex items-center gap-2 cursor-pointer bg-transparent text-white rounded-md outline-none" >
       <img
         src={USER_AVATAR}
         alt="user"
         className="w-9 h-9 rounded-md"
       />
       <i className={`bi ${!open ? "bi-caret-down-fill" : "bi-caret-up-fill"} ml-2`}></i>
-      </div>
+      </button>
 
       {open && (
         <div className="absolute right-0 mt-3 w-48 bg-black text-white rounded-md shadow-lg p-2 space-y-2">

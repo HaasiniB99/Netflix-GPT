@@ -8,18 +8,22 @@ import useTopRatedMovies from '../hooks/useTopRatedMovies';
 import useUpcomingMovies from '../hooks/useUpcomingMovies';
 import GptSearch from './GptSearch';
 import { useSelector } from 'react-redux';
-import GptMovieSuggestions from './GptMovieSuggestions';
+import TitleSearchResults from './TitleSearchResults';
+import MovieDetail from './MovieDetail';
+import FullscreenTrailer from './FullscreenTrailer';
 
 const Browse = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+  const showTitleSearch = useSelector((store) => store.gpt.showTitleSearch);
 
-  useNowPlayingMovies();
-  usePopularMovies();
-  useTopRatedMovies();
-  useUpcomingMovies();
+  const nowPlayingState = useNowPlayingMovies();
+  const popularState = usePopularMovies();
+  const topRatedState = useTopRatedMovies();
+  const upcomingState = useUpcomingMovies();
+  const categoryError = nowPlayingState.error || popularState.error || topRatedState.error || upcomingState.error;
 
   return (
-    <div>
+    <div className="min-h-screen bg-black">
 
       <Header/>
       { showGptSearch ? 
@@ -27,20 +31,19 @@ const Browse = () => {
         <div className="relative">
       {/* Background + search bar */}
       <GptSearch />
-
-      {/* Movie list, starts below search bar */}
-        <div className="absolute left-0 w-full z-10 -mt-96">
-          <GptMovieSuggestions />
-        </div>
       </div>
 
         </>
+         : showTitleSearch ?
+        <TitleSearchResults/>
          : 
         <>
           <MainContainer/>
-          <SecondaryContainer/>
+          <SecondaryContainer error={categoryError}/>
         </>
       }
+      <MovieDetail/>
+      <FullscreenTrailer/>
 
     </div>
   );

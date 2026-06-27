@@ -1,7 +1,7 @@
 import { useState,useRef } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
-import { createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,updateProfile  } from "firebase/auth";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile  } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
@@ -29,7 +29,7 @@ const Login = () => {
         const message = checkValidData(
             email.current?.value,
             password.current?.value,
-            !isSignInForm ? name.current?.value : null
+            !isSignInForm ? name.current?.value : undefined
         );
         setErrorMessage(message);
 
